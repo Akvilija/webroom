@@ -1,16 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Colors */
+  --black: #1A1A1A;
+  --gray-dark: #474747;
+  --gray-light: #D9D9D9;
+  --blue-primary: #1976D2;
+  --blue-light: #64B5F6;
+  --red: #D32F2F;
+  --white: #FFFFFF;
+  --gradient-blue: linear-gradient(180deg, #64B5F6 0%, #1976D2 100%);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Fonts */
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ /* Line Heights */
+ --line-height-16: 16px;
+ --line-height-19: 19px;
+ --line-height-21: 21px;
+ --line-height-22: 22px;
+ --line-height-24: 24px;
+ --line-height-25: 25px;
+ --line-height-28: 28px;
+ --line-height-42: 42px;
+
+ /* Body Text */
+ --text-small: 12px;
+ --text-large: 18px;
+ --text-label: 14px;
+ --text-paragraph: 16px;
+
+ /* Buttons */
+ --btn-primary-size: 16px;
+ --btn-secondary-size: 14px;
+
+ /* Captions */
+ --caption-small-size: 12px;
+ --caption-large-size: 14px;
+
+ /* Header Typography */
+ --h1-size: 36px;
+ --h2-size: 24px;
+ --h3-size: 20px;
+ --h4-size: 18px;
+ --h5-size: 16px;
+ --h6-size: 14px;
 }
 
+h1 {
+  font-size: var(--h1-size);
+  line-height: var(--line-height-42);
+  font-weight: 700;
+  font-family: var(--font-primary); /* Roboto for headings */
+}
 
+h2 {
+  font-size: var(--h2-size);
+  line-height: var(--line-height-28);
+  font-weight: 700;
+  font-family: var(--font-primary);
+}
+
+h3 {
+  font-size: var(--h3-size);
+  line-height: var(--line-height-24);
+  font-weight: 700;
+  font-family: var(--font-primary);
+}
+
+h4 {
+  font-size: var(--h4-size);
+  line-height: var(--line-height-21);
+  font-weight: 700;
+  font-family: var(--font-primary);
+}
+
+h5 {
+  font-size: var(--h5-size);
+  line-height: var(--line-height-19);
+  font-weight: 700;
+  font-family: var(--font-primary);
+}
+
+h6 {
+  font-size: var(--h6-size);
+  line-height: var(--line-height-16);
+  font-weight: 700;
+  font-family: var(--font-primary);
+}
+
+/* Paragraph and Small Text */
+p {
+  font-size: var(--text-paragraph);
+  line-height: var(--line-height-paragraph);
+  font-family: var(--font-secondary);
+}
+
+small {
+  font-size: var(--text-small);
+  line-height: var(--line-height-small);
+  font-family: var(--font-secondary);
+}
