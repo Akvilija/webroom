@@ -1,0 +1,27 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .navigationUl {
+    display: flex;
+    gap: 30px;
+  }
+  
+.navigationUl li {
+    text-transform: capitalize;
+}
+
+.navigationUl li a {
+  text-decoration: none;
+  color: var(--black);
+  font-family: var(--font-secondary);
+  font-size: var(--text-paragraph);
+  font-weight: 600;
+  line-height: var(--line-height-22);
+}
+
+.navigationUl li a.active {
+  color: var(--blue-primary);
+}
