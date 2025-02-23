@@ -1,7 +1,23 @@
 .productListContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; 
+    gap: 20px;
     justify-content: center; 
     align-items: start; 
+    max-width: 1500px;
+    padding: 20px;
+}
+
+@media (max-width: 1400px) {
+    .productListContainer {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+@media (max-width: 1000px) {
+    .productListContainer {
+        grid-template-columns: 1fr
+        
+    }
 }

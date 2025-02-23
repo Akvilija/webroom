@@ -15,25 +15,26 @@ interface ProductProps {
 const ProductItem = ({ product }: ProductProps): JSX.Element => {
   return (
     <div className={styles.productItem}>
-      {/* SVG Background (Cutout) */}
-      <img src={CutoutSVG} alt="Cutout Background" className={styles.cutoutSvg} />
+      <div className={styles.productInnerContainer}>
+        {/* SVG Background (Cutout) */}
+        <img src={CutoutSVG} alt="Cutout Background" className={styles.cutoutSvg} />
 
-      {/* Product Content */}
-      <div className={styles.content}>
-        {/* Left: Product Image */}
-        <div className={styles.imageContainer}>
-          <img src={product.image} alt={`${product.name} augalas`} />
+        {/* Product Content */}
+        <div className={styles.content}>
+          <div className={styles.imageContainer}>
+            <img src={product.image} alt={`${product.name} augalas`} />
+          </div>
+
+          <div className={styles.infoContainer}>
+            <h2>{product.name}</h2>
+            <p>{product.description}</p>
+            <p className={styles.price}>{product.price} €</p>
+          </div>
         </div>
 
-        {/* Right: Product Info */}
-        <div className={styles.infoContainer}>
-          <h2>{product.name}</h2>
-          <p>{product.description}</p>
-          <p className={styles.price}>{product.price} €</p>
-        </div>
-
+        {/* Button stays positioned at the bottom */}
+        <CartButton productId={product.id} />
       </div>
-      <CartButton productId={product.id} />
     </div>
   );
 };
