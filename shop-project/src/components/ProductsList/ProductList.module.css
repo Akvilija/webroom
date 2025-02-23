@@ -1,8 +1,7 @@
 .productListContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Ensures 3 equal columns */
-    gap: 30px 100px; /* Row gap (30px) and column gap (100px) */
-    justify-content: center; /* Centers the grid horizontally */
-    align-items: start; /* Aligns items at the top */
-    padding: 30px 100px;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    justify-content: center; 
+    align-items: start; 
 }
