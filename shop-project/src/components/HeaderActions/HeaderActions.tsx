@@ -3,12 +3,8 @@ import userIcon from '../../assets/icons/user.svg'
 import languageIcon from '../../assets/icons/language.svg'
 import styles from './HeaderActions.module.css'
 import CartIcon from '../CartIcon/CartIcon'
-import { useState } from 'react'
 
 const HeaderActions = (): JSX.Element => {
-    // state stebi prekes krepselyje
-    const [cartCount, setCartCount] = useState(0)
-
     return (
         <div className={styles.headerActions}>
             {/* Headerio veiksmu icons kaip linkai, kad paspaudus nueitu i pasirinkta veiksma */}
@@ -25,7 +21,7 @@ const HeaderActions = (): JSX.Element => {
                 </li>
                 <li>
                     <NavLink to='/cart'>
-                        <CartIcon itemCount={cartCount} />
+                        <CartIcon />
                     </NavLink>
                 </li>
             </ul>

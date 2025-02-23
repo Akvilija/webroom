@@ -1,15 +1,24 @@
-import { useState } from "react";
-import styles from "./CartButton.module.css";
+import { useCart } from '../../context/CartContext';
+import Cart from '../../assets/icons/cart0.svg';
+import Checked from '../../assets/icons/inchart.svg';
+import styles from './CartButton.module.css';
 
 interface CartButtonProps {
   productId: number;
 }
 
 const CartButton = ({ productId }: CartButtonProps): JSX.Element => {
-  const [inCart, setInCart] = useState(false);
+  const { cartItems, addToCart, removeFromCart } = useCart();
+  
+  // Check if product is already in cart
+  const inCart = cartItems.includes(productId);
 
   const toggleCart = () => {
-    setInCart(!inCart);
+    if (inCart) {
+      removeFromCart(productId);
+    } else {
+      addToCart(productId);
+    }
   };
 
   return (
@@ -17,17 +26,14 @@ const CartButton = ({ productId }: CartButtonProps): JSX.Element => {
       className={`${styles.cartButton} ${inCart ? styles.inCart : ""}`}
       onClick={toggleCart}
     >
-      {inCart ? (
-        <>
-          <span className={styles.cartIcon}>🛒</span>
-          Krepšelyje
-        </>
-      ) : (
-        <>
-          <span className={styles.addIcon}>➕</span>
-          Pridėti į krepšelį
-        </>
-      )}
+      <img
+        src={inCart ? Checked : Cart}
+        alt={inCart ? 'In Cart icon' : 'Cart icon'}
+        className={styles.cartIcon}
+      />
+      <span className={styles.cartText}>
+        {inCart ? 'Krepšelyje' : 'Pridėti į krepšelį'}
+      </span>
     </button>
   );
 };

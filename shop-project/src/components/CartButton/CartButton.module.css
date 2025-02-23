@@ -1,40 +1,42 @@
 .cartButton {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 235px; /* Match Figma */
-    height: 71px;
-    border-radius: 8px; /* Rounded corners */
-    font-size: 16px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-  }
-  
-  /* Default State - Add to Cart */
-  .cartButton {
-    background: white;
-    color: black;
-  }
-  
-  .cartButton:hover {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  
-  /* In Cart State */
-  .inCart {
-    background: lightgray;
-    color: black;
-    border: 2px solid gray;
-  }
-  
-  .inCart:hover {
-    background: gray;
-    color: white;
-  }
-  
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 210px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  background: var(--white);
+  color: var(--black);
+}
+
+.cartIcon {
+  width: 25px;
+  filter: brightness(0) saturate(100%) invert(33%) sepia(99%) saturate(450%) hue-rotate(200deg);
+}
+
+/* Hover Efektas */
+.cartButton:hover {
+  color: var(--blue-primary)
+}
+
+.inCart {
+  background: var(--gray-light);
+  color: var(--gray-dark);
+}
+
+.inCart img {
+  filter: grayscale(100%) brightness(0.7);
+}
+
+.inCart:hover {
+  color: var(--blue-primary)
+}
