@@ -1,17 +1,5 @@
 .cartIconContainer {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-  }
-  
-  /* Default Cart Icon */
-  .cartIcon {
-    width: 30px;
-    height: 30px;
-    transition: filter 0.3s ease, transform 0.3s ease;
   }
   
   /* Active State (Blue) */

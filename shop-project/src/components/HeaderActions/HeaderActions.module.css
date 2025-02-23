@@ -1,8 +1,11 @@
 .headerActions ul {
     display: flex;
-    width: 42px;
-    height: 42px;
-    justify-content: center;
     align-items: center;
-    gap: 10.5px;
+    gap: 10px;
 }
+
+.headerActions img {
+    width: 40px; 
+    height: 40px;
+    object-fit: contain;
+  }
