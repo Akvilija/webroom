@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "name": "Netikrožė",
+      "description": "Netikrožė buvo pirmasis augalas, kurį atrado robotų soduose, nes ji niekada nepraranda žiedų.",
+      "price": 205.82,
+      "discountPrice": 314.20,
+      "image": "/products/netikroze.jpg",
+      "onSale": true
+    },
+    {
+      "id": 2,
+      "name": "Plastalapis",
+      "description": "Plastalapis tapo mėgstamiausiu augalu tarp vaikų, nes jis buvo toks lengvas, kad net vėjo gūsiai jo nenunešdavo.",
+      "price": 144.85,
+      "discountPrice": null,
+      "image": "/products/plastalapis.jpg",
+      "onSale": false
+    },
+    {
+      "id": 3,
+      "name": "Feikmedis",
+      "description": "Feikmedis augo mieste, kuriame niekas nesirūpino tikrais medžiais, todėl jis buvo mylimas už savo pastovumą ir žalią spalvą.",
+      "price": 177.14,
+      "discountPrice": 215.66,
+      "image": "/products/feikmedis.jpg",
+      "onSale": true
+    },
+    {
+      "id": 4,
+      "name": "Sintetukas",
+      "description": "Sintetukas – tai augalas, kuris sugebėjo įkvėpti naują gyvenimą dirbtiniuose soduose, nes jo lapai niekada nesusiraukšlėjo.",
+      "price": 32.88,
+      "discountPrice": null,
+      "image": "/products/sintetukas.jpg",
+      "onSale": false
+    },
+    {
+      "id": 5,
+      "name": "Nevystutis",
+      "description": "Nevystutis buvo žinomas dėl savo netikėtino sugebėjimo niekada nepasenti. Jo žiedai visada išliko švieži ir gyvybingi.",
+      "price": 289.17,
+      "discountPrice": 404.11,
+      "image": "/products/nevystutis.jpg",
+      "onSale": true
+    },
+    {
+      "id": 6,
+      "name": "Žaliuoklis",
+      "description": "Žaliuoklis buvo pirmasis dirbtinis augalas, kuris sugebėjo puikiai atitikti tikrąjį žaliąjį augalą.",
+      "price": 205.82,
+      "discountPrice": null,
+      "image": "/products/zaliuoklis.jpg",
+      "onSale": false
+    }
+  ]
+  
