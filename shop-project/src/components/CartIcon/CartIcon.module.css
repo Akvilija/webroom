@@ -11,26 +11,20 @@
   .cartIcon {
     width: 30px;
     height: 30px;
-    filter: grayscale(100%); /* Default: Black/Gray */
     transition: filter 0.3s ease, transform 0.3s ease;
   }
   
-  /* Hover & Active States */
-  .cartIcon:hover {
-    filter: brightness(0) saturate(100%) invert(33%) sepia(99%) saturate(450%) hue-rotate(200deg); /* Turns Blue */
-    transform: scale(1.1);
-  }
-  
+  /* Active State (Blue) */
   .cartIcon.active {
-    filter: brightness(0) saturate(100%) invert(33%) sepia(99%) saturate(450%) hue-rotate(200deg); /* Blue when active */
+    filter: brightness(0) saturate(100%) invert(33%) sepia(99%) saturate(450%) hue-rotate(200deg);
   }
   
-  /* Notification Badge */
+  /* Badge */
   .cartBadge {
     position: absolute;
     top: -5px;
     right: -5px;
-    background: blue;
+    background: #1f74b7;
     color: white;
     font-size: 12px;
     font-weight: bold;
