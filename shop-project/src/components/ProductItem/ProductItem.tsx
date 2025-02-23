@@ -1,4 +1,6 @@
-import styles from './ProductItem.module.css'
+import styles from './ProductItem.module.css';
+
+import CutoutSVG from '../../assets/icons/cutout.svg';
 
 interface ProductProps {
   product: {
@@ -13,26 +15,22 @@ interface ProductProps {
 const ProductItem = ({ product }: ProductProps): JSX.Element => {
   return (
     <div className={styles.productItem}>
-      {/* Left: Product Image */}
-      {product.image && (
+      {/* SVG Background (Cutout) */}
+      <img src={CutoutSVG} alt="Cutout Background" className={styles.cutoutSvg} />
+
+      {/* Product Content */}
+      <div className={styles.content}>
+        {/* Left: Product Image */}
         <div className={styles.imageContainer}>
-          <img
-            src={product.image}
-            alt={`${product.name} augalas`}
-          />
+          <img src={product.image} alt={`${product.name} augalas`} />
         </div>
-      )}
 
-      {/* Right: Product Info */}
-      <div className={styles.infoContainer}>
-        {product.name && <h2>{product.name}</h2>}
-        {product.description && <p>{product.description}</p>}
-        {product.price && <p className={styles.price}>{product.price}</p>}
-      </div>
-
-      {/* Bottom-right Cutout with Button */}
-      <div className={styles.buttonContainer}>
-        <button className={styles.productButton}>Pridėti į krepšelį</button>
+        {/* Right: Product Info */}
+        <div className={styles.infoContainer}>
+          <h2>{product.name}</h2>
+          <p>{product.description}</p>
+          <p className={styles.price}>{product.price} €</p>
+        </div>
       </div>
     </div>
   );
