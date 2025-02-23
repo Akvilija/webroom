@@ -4,7 +4,7 @@ type LayoutProps = {
     children: ReactNode;
     header: ReactNode;
 }
-
+// pagrindinis isdestymas
 const Layout = ({ children, header }: LayoutProps): JSX.Element => {
     return (
         <div>

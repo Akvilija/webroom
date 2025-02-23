@@ -1,16 +1,27 @@
 .navigation {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-  }
-  
-  .navigationUl {
-    display: flex;
-    gap: 30px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px; 
+  cursor: pointer;
+  padding: 10px 15px; 
+}
+
+.navigationUl {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
 .navigationUl li {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .navigationUl li a {
@@ -24,4 +35,29 @@
 
 .navigationUl li a.active {
   color: var(--blue-primary);
+}
+
+@media (max-width: 873px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navigationUl {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 180px;
+    background: var(--white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 0; 
+    border-radius: 8px; 
+    gap: 20px;
+  }
+
+  .navigationUl.open {
+    display: flex;
+  }
 }
