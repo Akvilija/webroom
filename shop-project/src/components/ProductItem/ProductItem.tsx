@@ -1,25 +1,25 @@
-import styles from './ProductItem.module.css';
-import CutoutSVG from '../../assets/icons/cutout.svg';
-import CartButton from '../CartButton';
-
+import styles from './ProductItem.module.css'
+import CutoutSVG from '../../assets/icons/cutout.svg'
+import CartButton from '../CartButton'
+// Produktu komponento tipai (ProductProps) nurodo, kokius duomenis priims komponentas
 interface ProductProps {
   product: {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    image: string;
-  };
+    id: number
+    name: string
+    description: string
+    price: number
+    image: string
+  }
 }
 
 const ProductItem = ({ product }: ProductProps): JSX.Element => {
   return (
     <div className={styles.productItem}>
       <div className={styles.productInnerContainer}>
-        {/* SVG Background (Cutout) */}
+        {/* SVG foninis elementas su ispjova */}
         <img src={CutoutSVG} alt="Cutout Background" className={styles.cutoutSvg} />
 
-        {/* Product Content */}
+        {/* Productu turinys */}
         <div className={styles.content}>
           <div className={styles.imageContainer}>
             <img src={product.image} alt={`${product.name} augalas`} />
@@ -32,11 +32,11 @@ const ProductItem = ({ product }: ProductProps): JSX.Element => {
           </div>
         </div>
 
-        {/* Button stays positioned at the bottom */}
+        {/* mygtuko komponentas apacioje */}
         <CartButton productId={product.id} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductItem;
+export default ProductItem

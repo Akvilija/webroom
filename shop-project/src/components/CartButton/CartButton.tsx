@@ -10,7 +10,7 @@ interface CartButtonProps {
 const CartButton = ({ productId }: CartButtonProps): JSX.Element => {
   const { cartItems, addToCart, removeFromCart } = useCart();
   
-  // Check if product is already in cart
+  // PAtikrinimas ar yra produktas krepselyje
   const inCart = cartItems.includes(productId);
 
   const toggleCart = () => {
@@ -23,15 +23,19 @@ const CartButton = ({ productId }: CartButtonProps): JSX.Element => {
 
   return (
     <button
+      // dinamiska klase mygtuko stiliavimui, kai preke yra krepselyje ir ja galima pasirinkti
       className={`${styles.cartButton} ${inCart ? styles.inCart : ""}`}
+      // paspaudus issaukiama funkcija kuri prideda arba isima is krepselio
       onClick={toggleCart}
     >
       <img
+      // parenkama, kuri icona bus naudojama
         src={inCart ? Checked : Cart}
         alt={inCart ? 'In Cart icon' : 'Cart icon'}
         className={styles.cartIcon}
       />
       <span className={styles.cartText}>
+        {/* dinamiskai parenkamas uzrasas */}
         {inCart ? 'Krepšelyje' : 'Pridėti į krepšelį'}
       </span>
     </button>
