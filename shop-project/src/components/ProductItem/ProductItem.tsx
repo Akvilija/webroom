@@ -1,6 +1,6 @@
 import styles from './ProductItem.module.css';
-
 import CutoutSVG from '../../assets/icons/cutout.svg';
+import CartButton from '../CartButton';
 
 interface ProductProps {
   product: {
@@ -31,7 +31,9 @@ const ProductItem = ({ product }: ProductProps): JSX.Element => {
           <p>{product.description}</p>
           <p className={styles.price}>{product.price} €</p>
         </div>
+
       </div>
+      <CartButton productId={product.id} />
     </div>
   );
 };

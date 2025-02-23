@@ -1,0 +1,40 @@
+.cartButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 235px; /* Match Figma */
+    height: 71px;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  /* Default State - Add to Cart */
+  .cartButton {
+    background: white;
+    color: black;
+  }
+  
+  .cartButton:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* In Cart State */
+  .inCart {
+    background: lightgray;
+    color: black;
+    border: 2px solid gray;
+  }
+  
+  .inCart:hover {
+    background: gray;
+    color: white;
+  }
+  
